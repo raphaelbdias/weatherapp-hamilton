@@ -1,0 +1,22 @@
+{
+    "indoor": [
+      "Temperature Regulation",
+      "Humidity Control",
+      "Leakage and Water Damage",
+      "Condensation"
+    ],
+    "outdoor": [
+      "Extreme Temperatures",
+      "Precipitation",
+      "Wind",
+      "Freeze-Thaw Cycles",
+      "Frost",
+      "Ice Accumulation",
+      "Storms",
+      "Sun Exposure",
+      "Fog",
+      "Wildfires",
+      "Floods"
+    ]
+  }
+  
