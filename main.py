@@ -41,20 +41,8 @@ def get_short_term_forecast():
 
 # Function to retrieve PCIC data for long-term forecast
 def get_long_term_forecast(year):
-    # Replace this with your actual PCIC data retrieval logic
-    # For demonstration, let's assume we return some dummy data
-    pcic_data = []
-    for month in range(1, 13):
-        monthly_data = {
-            'DateTime': f'{year}-{month}-01',  # Example date
-            'Temperature': 20,
-            'Precipitation': 'Low',
-            'Season': 'Summer',
-            'Extreme Weather': 'None',
-            'Frosting': 'None',
-            'Freeze': 'None'
-        }
-        pcic_data.append(monthly_data)
+    year_data = pcic[pcic['Year'] == int(year)]
+    pcic_data = year_data.dropna(axis=1).to_dict('records')
     return pcic_data
 
 # Function to perform historical comparison and risk assessment
@@ -84,7 +72,7 @@ def main():
         forecast_data = get_short_term_forecast()
     else:
         # Allow user to choose year for long-term forecast
-        selected_year = st.number_input("Enter the year:", min_value=1900, max_value=2022, value=2022)
+        selected_year = st.number_input("Enter the year:", min_value=2024, max_value=2095, value=2024)
         # Call function to get long-term forecast data
         forecast_data = get_long_term_forecast(selected_year)
     
