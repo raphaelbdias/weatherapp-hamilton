@@ -28,3 +28,6 @@
 
 7. **Scalability and Performance:**
    - Basic optimization for performance to ensure real-time data processing and responsiveness within the scope of the demo.
+  
+     
+![HEAD2 (1)](https://github.com/user-attachments/assets/e3562637-2df1-4449-b646-51e92e0412bd)
